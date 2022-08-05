@@ -1,0 +1,36 @@
+{
+	"name": "qa-cypress-signature",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"test-mocha": "mocha --compilers ts:ts-node/register app ",
+		"test-front": "npx cypress open --config-file dev.config.js",
+		"test-local": "npx cypress open --config-file local.config.js",
+		"test-dev": "npx cypress run --config-file dev.config.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"standard": {
+		"globals": [
+			"describe",
+			"it",
+			"cy",
+			"beforeEach",
+			"before",
+			"afterEach",
+			"after"
+		]
+	},
+	"devDependencies": {
+		"chai": "^4.3.6",
+		"cypress": "^10.3.1",
+		"cypress-file-upload": "^5.0.8",
+		"mocha": "^10.0.0"
+	},
+	"dependencies": {
+		"i": "^0.3.7"
+	}
+}
